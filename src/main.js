@@ -2,8 +2,12 @@ import $ from 'jquery';
 import {DoctorSearch} from './doctor.js';
 
 var doctorToConditionFunc = function(results) {
-  let names = null;
-  $('.doctorToCondition').text(results.data[0].profile.first_name);
+  $.each(results, function( index, value) {
+    $('.doctorToCondition').append('<li>'+value+'</li>');
+  })
+  // $('.doctorToCondition').append('hi',results)
+  // let names = null;
+  // $('.doctorToCondition').text(results.data[0].profile.first_name);
   // results.forEach(function(element) {
   //   names.push(element.data.profile.first_name);
   // });
