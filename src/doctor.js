@@ -21,8 +21,17 @@ export class DoctorSearch {
       console.log(11,results);
       console.log(22,results.data);
       $.each( results.data, function(key, value) {
-        console.log('heyo',key+ ": " + value.profile.first_name)
-        doc_names.push(value.profile.first_name+" "+value.profile.last_name)
+        let website = 'No website provided, please call.';
+        let newPatients = 'Accepting new patients'
+        if(value.practices[0].website != undefined) {
+          website = value.practices[0].website;
+        }
+        if(!value.practices[0].accepts_new_patients) {
+          newPatients = 'Not accepting new patients'
+        }
+        // console.log('heyo',key+ ": " + value.profile.first_name)
+        doc_names.push(value.profile.first_name+" "+value.profile.last_name+" at "+ value.practices[0].visit_address.street+" "+value.practices[0].visit_address.city+" "+value.practices[0].visit_address.state+" "+value.practices[0].visit_address.zip+" Phone Number: "+value.practices[0].phones[0].number+" "+website+" "+newPatients);
+        console.log('heyo2',key+ ": " + value.practices[0].accepts_new_patients)
       });
       console.log(doc_names)
       doctorToConditionFunc(doc_names);
