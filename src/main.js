@@ -6,17 +6,10 @@ var doctorToConditionFunc = function(results) {
   $.each(results, function( index, value) {
     $('.doctorToCondition').append('<li>'+value+'</li>');
   })
-  // $('.doctorToCondition').append('hi',results)
-  // let names = null;
-  // $('.doctorToCondition').text(results.data[0].profile.first_name);
-  // results.forEach(function(element) {
-  //   names.push(element.data.profile.first_name);
-  // });
-  // $('.doctorToCondition').text(names);
 }
 
-var failedSearch = function() {
-
+var failedSearch = function(message) {
+  $('.doctorToCondition').text('Error occured please see message: '+message);
 }
 
 $(document).ready(function() {
@@ -32,12 +25,9 @@ $(document).ready(function() {
     if(inputName.length > 0) {
       parameters.name = inputName;
     }
-    // if(inputLastName.length > 0) {
-    //   parameters.lastName = inputLastName;
-    // }
     console.log(123,inputCondition,inputName,parameters)
     let doctorResult = new DoctorSearch(parameters);
     $('.userInfo').text('Searching, please wait');
-    doctorResult.makeConditionRequest(doctorToConditionFunc);
-  })
+    doctorResult.makeConditionRequest(doctorToConditionFunc,failedSearch);
+  });
 })
