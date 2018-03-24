@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import {DoctorSearch} from './doctor.js';
+import './styles.css';
 
 var doctorToConditionFunc = function(results) {
   $('.doctorToCondition').text('The following doctors can help you');

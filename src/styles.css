@@ -1,0 +1,37 @@
+body {
+  background-color: #2ECC71;
+}
+
+label {
+  color: #5D6D7E;
+  border: 1px solid silver;
+  border-radius: 5px;
+  background-color: #D0ECE7;
+  padding: 5px;
+  font-size: large;
+  margin-top: 25px;
+}
+
+input {
+  height: 30px;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #566573;
+  height: 25px;
+  border-radius: 5px;
+  border-color: gray;
+  color: white;
+}
+
+li {
+  color: #154360;
+  border: 1px solid #154360;
+  border-radius: 5px;
+  background-color: #FCF3CF;
+  padding: 5px;
+  font-size: large;
+  margin-top: 25px;
+  height: 25px;
+}
