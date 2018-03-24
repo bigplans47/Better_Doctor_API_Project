@@ -25,7 +25,7 @@ button {
   color: white;
 }
 
-li {
+ul {
   color: #154360;
   border: 1px solid #154360;
   border-radius: 5px;
@@ -34,4 +34,42 @@ li {
   font-size: large;
   margin-top: 25px;
   height: 25px;
+}
+
+h1 {
+  color: white;
+  border: 1px solid #154360;
+  border-radius: 5px;
+  background-color: #006400;
+  padding: 2px;
+}
+
+h3 {
+  color: black;
+  border: 1px solid #154360;
+  border-radius: 5px;
+  background-color: #8FBC8F;
+  padding: 2px;
+}
+
+#loader {
+  /* display: none; */
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 3s linear infinite; /* Safari */
+  animation: spin 3s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

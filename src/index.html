@@ -3,49 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>Find a great Doctor</title>
-    <style>
-      .loader {
-        border: 16px solid #f3f3f3;
-        border-radius: 50%;
-        border-top: 16px solid #3498db;
-        width: 120px;
-        height: 120px;
-        -webkit-animation: spin 3s linear infinite; /* Safari */
-        animation: spin 3s linear infinite;
-      }
-
-      /* Safari */
-      @-webkit-keyframes spin {
-        0% { -webkit-transform: rotate(0deg); }
-        100% { -webkit-transform: rotate(360deg); }
-      }
-
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-</style>
   </head>
   <body>
-    <h3>Choose a doctor search below</h3>
-    <div class="loader"></div>
-    <p>_________________________________________</p>
+    <h1>Choose a doctor search below</h1>
+    <hr>
     <form id='formCondition'>
       <label for="condition">What is your condition?</label>
       <input type="text" name="condition" placeholder="Cancer, optional field" id='inputCondition'>
       <button type="submit" name='button'>Submit</button>
     </form>
     <br>
-    <p>_________________________________________</p>
+    <hr>
     <form id='formDocName'>
       <label for="condition">What is your doctor's name?</label>
       <input type="text" name="condition" placeholder="Walter, optional field" id='inputName'>
       <button type="submit" name='button'>Submit</button>
     </form>
     <br>
-    <div class="userInfo"></div>
+    <hr>
+    <div class="userInfo">
+      <div id="loader"></div>
+    </div>
     <br>
     <div class="doctorToCondition"></div>
-    <!-- <div class="doctorWithName"></div> -->
   </body>
 </html>

@@ -1,7 +1,6 @@
 A Project to make a Doctor Info API
 
-An application where a user take advantage of the Better Doctor API to find doctors who treat certain conditions, you can also search by name to find that doctor your friend recommended. If the API doesn't return results the program will let you know there are no results.
-
+An application where a user take advantage of the Better Doctor API to find doctors who treat certain conditions, you can also search by name to find that doctor your friend recommended. If the API doesn't return results the program will let you know why are no results such as a doctor name is not in the system.
 
 To Test Locally
 
